@@ -1,6 +1,6 @@
 from collections import deque
 
-def fifo(k : int, m : int, rm : list) -> int:
+def fifo(k : int, rm : list) -> int:
     
     misses = 0
 
@@ -13,7 +13,7 @@ def fifo(k : int, m : int, rm : list) -> int:
 
         misses += 1
 
-        if len(cache) >= m:
+        if len(cache) >= k:
             oldest = cache.popleft()
             items.remove(oldest)
 
