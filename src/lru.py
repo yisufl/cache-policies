@@ -8,6 +8,7 @@ def lru(k : int, rm : list) -> int:
 
     for r in rm:
         if r in cache:
+            cache.move_to_end(r)
             continue
 
         misses += 1

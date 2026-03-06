@@ -2,9 +2,9 @@ import sys
 from pathlib import Path
 from collections import deque
 
-import fifo
-import lru
-import optff
+from fifo import fifo
+from lru import lru
+from optff import optff
 
 def main():
     if len(sys.argv) > 1:
@@ -21,9 +21,9 @@ def main():
                 return
             
 
-            fifoMisses = 0
-            lruMisses = 0
-            optffMisses = 0
+            fifoMisses = fifo(k, requests)
+            lruMisses = lru(k, requests)
+            optffMisses = optff(k, requests)
 
             
             out = Path(sys.argv[1]).with_suffix(".out")

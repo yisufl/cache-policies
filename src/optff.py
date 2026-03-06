@@ -1,4 +1,3 @@
-
 def optff(k : int, rm : list):
 
     misses = 0
