@@ -21,7 +21,7 @@ The output misses are printed and written to the `.out` of the same filepath (e.
 - `k >= 1` (cache capacity)
 
 ## Test Generator
-`generateTest.py` generates a test to the filepath given as a command line argument. It selects random values for the following values:
+`tests/generateTest.py` generates a test to the filepath given as a command line argument. It selects random values for the following values:
 - `k` in `[1, 50]`
 - `m` in `[50, 500]`
 - `r_i` in `[0, 50]`
